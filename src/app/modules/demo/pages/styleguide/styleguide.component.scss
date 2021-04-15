@@ -27,27 +27,3 @@ $btn-size: 40px;
     opacity: 1;
   }
 }
-
-.window-size {
-  position: fixed;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  height: 37px;
-  padding: 0 12px;
-  background: rgba(0, 0, 0, .7);
-  color: $white;
-  font-size: 12px;
-  line-height: 37px;
-
-  span {
-    font-size: 16px;
-    font-weight: bold;
-  }
-}
-
-.test {
-  width: 60px;
-  height: 100%;
-  background-color: $white; // TODO: red
-}

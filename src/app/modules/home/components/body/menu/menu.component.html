@@ -1,0 +1,11 @@
+
+<nav aria-label="Navigation principale">
+    <ul class="main-navigation">
+        <li *ngFor="let menu of menuData; let i = index" [attr.data-id]="menu.id" [attr.data-index]="i">
+            <a app-menu-item [menu]="menu" (click)="nav.setActiveMenu(menu.id)" (mouseover)="nav.setActiveMenu(menu.id)"
+                (mouseout)="nav.setActiveMenu(nav.getActiveMenu())">
+            </a>
+        </li>
+    </ul>
+    <div class="active-menu-bar"></div>
+</nav>

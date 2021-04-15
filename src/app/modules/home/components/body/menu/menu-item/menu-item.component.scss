@@ -1,0 +1,44 @@
+@import 'variables';
+
+:host {
+  display: block;
+  transition: all .2s ease;
+  outline: none;
+  color: $primary;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// ---- KEYBOARD FOCUS ONLY---->
+
+// this unnecessary HMTL tag was added to fix IE flex child text wrap bug
+.menu-label {
+  width: 100%;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 12px;
+}
+
+// <!---- KEYBOARD FOCUS ONLY ----
+// show item focus on keyboard navigation
+// but not on mouse interactions
+.focused-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $menu-size;
+  padding: 0 24px;
+  text-align: center;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+:host:focus > .focused-content {
+  display: flex;
+  background: green;
+}

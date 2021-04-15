@@ -1,0 +1,54 @@
+@import 'variables';
+
+:host {
+  position: fixed;
+  z-index: 99;
+  width: $menu-size-width;
+  height: 100vh;
+  background-color: #31334A;
+}
+
+nav {
+  position: relative;
+}
+
+button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.main-navigation {
+  position: relative;
+  z-index: 99;
+  width: $menu-size-width;
+  height: 100%;
+  padding: 0;
+  box-shadow: 4px;
+  list-style: none;
+
+  a {
+    position: relative;
+    outline: none;
+    color: $grey-a;
+  }
+}
+
+.is-active {
+  color: $primary;
+}
+
+.active-menu-bar {
+  display: block;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: $menu-size;
+  transition: all .5s cubic-bezier(.25, 1, .35, 1);
+  border-radius: 0 3px 3px 0;
+  background-color: $primary;
+}
