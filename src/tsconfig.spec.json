@@ -1,0 +1,36 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "outDir": "../out-tsc/spec",
+        "baseUrl": "",
+        "paths": {
+            "@app/*": ["app/*"],
+            "@env/*": ["environments/*"],
+            "@core/*": ["app/core/*"],
+            "@api/*": ["app/core/api/*"],
+            "@shared/*": ["app/shared/*"],
+            "@consts/*": ["app/shared/consts/*"],
+            "@directives/*": ["app/shared/directives/*"],
+            "@tools/*": ["app/core/tools/*"],
+            "@models/*": ["app/core/models/*"],
+            "@material/*": ["app/modules/angular-material/*"],
+            "@generated/*": ["app/generated/*"]
+        },
+        "types": [
+            "jasmine",
+            "node"
+        ]
+    },
+    "files": [
+        "test.ts",
+        "polyfills.ts"
+    ],
+    "include": [
+        "**/*.spec.ts",
+        "**/*.d.ts"
+    ],
+    "exclude": [
+        "**/generated/**/*.ts"
+    ]
+}

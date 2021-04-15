@@ -1,0 +1,32 @@
+.search-wrapper {
+  display: flex;
+  width: 100%;
+  padding: 7px;
+  border-radius: 4px;
+  background-color: #FFF;
+}
+
+.search-form {
+  display: flex;
+  display: flex;
+  -webkit-flex: 1 1 auto;
+  flex: 1 1 auto;
+  border-radius: 2px 0 0 2px;
+  background-color: #FFF;
+  color: #484848;
+}
+
+.home-banner-form {
+  -webkit-order: 3;
+  order: 3;
+  width: 100%;
+  max-width: 1030px;
+  margin: 30px auto 0;
+  padding: 0 25px;
+  text-align: left;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}

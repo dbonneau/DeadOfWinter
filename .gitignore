@@ -1,0 +1,39 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/reports
+/generators/app/templates/src/**/*.ngfactory.ts
+/generators/app/templates/src/**/*.css.shim.ts
+/generators/app/templates/src/**/*.css.ts
+/generators/app/templates/src/node_modules
+
+# dependencies
+/node_modules
+/bower_components
+
+# IDEs and editors
+/.idea
+*.iml
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+
+# Doc
+/documentation
+
+# e2e
+/generators/app/templates/e2e/*.js
+/generators/app/templates/e2e/*.map
+
+#System Files
+.DS_Store
+Thumbs.db
+
+yarn.lock

@@ -1,0 +1,99 @@
+{
+  "name": "dead-of-winter",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "build": "ng build",
+    "test": "ng test",
+    "test:ci": "ng test --browsers ChromeHeadlessCI --code-coverage --watch=false",
+    "test:chrome": "ng test --browsers Chrome --code-coverage --watch=true",
+    "lint": "npm run lint:styles && ng lint --type-check",
+    "lint:styles": "stylelint \"src/app/**/*.scss\" \"src/assets/styles/**/*.scss\" --fix",
+    "lint:ci": "ng lint",
+    "lint:fix": "eslint -c .eslintrc.json --ext .ts src/ --fix",
+    "e2e": "ng e2e",
+    "commit": "npx cz"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~11.0.6",
+    "@angular/cdk": "^11.0.3",
+    "@angular/common": "~11.0.6",
+    "@angular/compiler": "~11.0.6",
+    "@angular/core": "~11.0.6",
+    "@angular/forms": "~11.0.6",
+    "@angular/material": "^11.0.3",
+    "@angular/platform-browser": "~11.0.6",
+    "@angular/platform-browser-dynamic": "~11.0.6",
+    "@angular/router": "~11.0.6",
+    "@commitlint/cli": "^11.0.0",
+    "@ngx-translate/core": "^13.0.0",
+    "@ngx-translate/http-loader": "^6.0.0",
+    "commitizen": "^4.2.3",
+    "cz-customizable": "^6.3.0",
+    "eslint-import-resolver-typescript": "^2.3.0",
+    "highlight.js": "^9.17.1",
+    "moment": "^2.29.1",
+    "ngx-highlightjs": "^4.0.2",
+    "rxjs": "~6.6.0",
+    "tslib": "^2.0.0",
+    "zone.js": "~0.10.2"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.1100.6",
+    "@angular-eslint/builder": "1.0.0",
+    "@angular-eslint/eslint-plugin": "1.0.0",
+    "@angular-eslint/eslint-plugin-template": "1.0.0",
+    "@angular-eslint/schematics": "1.0.0",
+    "@angular-eslint/template-parser": "1.0.0",
+    "@angular/cli": "~11.0.6",
+    "@angular/compiler-cli": "~11.0.6",
+    "@types/jasmine": "~3.6.0",
+    "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "4.3.0",
+    "@typescript-eslint/parser": "4.3.0",
+    "codelyzer": "^6.0.0",
+    "eslint": "^7.6.0",
+    "eslint-plugin-angular": "^4.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "30.7.6",
+    "eslint-plugin-prefer-arrow": "1.2.2",
+    "husky": "^4.3.7",
+    "jasmine-core": "~3.6.0",
+    "jasmine-spec-reporter": "~5.0.0",
+    "karma": "~5.1.0",
+    "karma-chrome-launcher": "~3.1.0",
+    "karma-coverage": "~2.0.3",
+    "karma-jasmine": "~4.0.0",
+    "karma-jasmine-html-reporter": "^1.5.0",
+    "lint-staged": "^10.5.3",
+    "protractor": "~7.0.0",
+    "ts-node": "~8.3.0",
+    "typescript": "~4.0.3",
+    "stylelint": "^13.7.2",
+    "stylelint-config-property-sort-order-smacss": "^6.3.0",
+    "stylelint-declaration-block-no-ignored-properties": "^2.3.0",
+    "stylelint-no-unsupported-browser-features": "^4.0.0",
+    "stylelint-scss": "^3.18.0",
+    "tslint": "~6.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": ".cz-config.js"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "ng lint && ng test --watch=false && ng build --prod",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix"
+  }
+}

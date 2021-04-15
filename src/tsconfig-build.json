@@ -1,0 +1,41 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "declaration": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "lib": [
+            "esnext",
+            "es2017",
+            "dom"
+        ],
+        "module": "es6",
+        "baseUrl": ".",
+        "moduleResolution": "node",
+        "noEmitOnError": true,
+        "noImplicitAny": true,
+        "outDir": "../dist",
+        "rootDir": ".",
+        "sourceMap": true,
+        "target": "es5",
+        "inlineSources": true,
+        "stripInternal": true,
+        "typeRoots": [
+            "../node_modules/@types"
+        ],
+        "types": []
+    },
+    "exclude": [
+        "**/*.spec.*",
+        "e2e/**",
+        "system-config-spec.ts",
+        "node_modules"
+    ],
+    "angularCompilerOptions": {
+        "genDir": "../dist",
+        "debug": true,
+        "strictMetadataEmit": true,
+        "skipTemplateCodegen": true
+    }
+}

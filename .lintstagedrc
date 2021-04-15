@@ -1,0 +1,9 @@
+{
+ "{src,e2e}/**/*.ts,!src/generated/**": [
+  "tslint --fix",
+  "git add"
+ ],
+ "*.scss": [
+   "git add"
+ ]
+}

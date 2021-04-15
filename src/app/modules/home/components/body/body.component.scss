@@ -1,0 +1,28 @@
+@import 'variables';
+
+:host {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  background: #F5F2F3;
+
+  &.menu-opened {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+main {
+  width: 100%;
+  min-height: calc(100vh - #{$header-height});
+  margin: $header-height 0 0 $menu-size-width;
+  background-color: $background-color;
+
+  //   &.popin-opened {
+  //     z-index: 5;
+  //     min-height: 100vh;
+  //     margin: 0;
+  //   }
+}
